@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Calender Page";
+}
+
+<link href='~/fullcalendarjs/lib/main.css' rel='stylesheet' />
+<script src='~/fullcalendarjs/lib/main.js'></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            dateClick: function (info) {
+                let msg = prompt("Please enter your message:");
+
+                if (msg != null) {
+                    info.dayEl.innerHTML = msg;
+                    info.dayEl.style.backgroundColor = '#6edb92';
+                }
+            }
+        });
+        calendar.render();
+    });
+
+</script>
+
+<div id='calendar'></div>
