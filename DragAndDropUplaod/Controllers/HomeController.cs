@@ -40,10 +40,7 @@ namespace DragAndDropUplaod.Controllers
         }
 
         //[HttpGet]
-        //public ActionResult Upload()
-        //{
-        //    return View();
-        //}
+        //Happy to Change
 
         //[HttpPost]
         public async Task<ActionResult> UploadAsync(ICollection<IFormFile> files)
